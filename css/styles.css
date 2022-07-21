@@ -174,6 +174,22 @@ p {
   color: var(--accent-color);
 }
 
+.header-link-line {
+  position: relative;
+}
+
+.header-link-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+}
+
 /* herro */
 
 .main-title {
@@ -291,6 +307,17 @@ p {
   gap: 30px;
   align-items: center;
 }
+
+/*
+.what-text::before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 50px;
+  background-color: #188ce8;
+}
+*/
 
 .name-item {
   padding-top: 30px;
@@ -593,4 +620,50 @@ p {
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* modal window */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  background-color: var(--background-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

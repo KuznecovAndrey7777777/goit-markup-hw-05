@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>module 04</title>
+  <title>module 05</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -23,7 +23,7 @@
       <nav class="header-nav">
         <ul class="header-list">
           <li class="header-item">
-            <a class="header-link current" href="./index.html">Студия</a>
+            <a class="header-link header-link-line current" href="./index.html">Студия</a>
           </li>
           <li class="header-item">
             <a class="header-link" href="./portfolio.html">Портфолио</a>
@@ -54,7 +54,7 @@
     <section class="hero overlay">
       <div class="container">
         <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="hero-button" type="button">Заказать услугу</button>
+        <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
       </div>
     </section>
     <!-- feature section-->
@@ -409,6 +409,17 @@
       </div>
     </div>
   </footer>
+  <!-- modal window -->
+  <div class="backdrop" data-modal>
+    <div class="modal">
+      <button class="modal-button" data-modal-close>
+        <svg class="modal-button-icon" width="11" height="11">
+          <use href="./images/icons.svg#Vector"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
